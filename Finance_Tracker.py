@@ -3,7 +3,7 @@ expenses_by_category = {}  # Global dictionary to store expenses
 def print_welcome():
     print("Welcome to the Personal Finance Tracker!")
 
-def main_menu():
+def main_menu():j
     while True:
         print("\nWhat would you like to do?")
         print("1. Add Expense")

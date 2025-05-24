@@ -1,0 +1,45 @@
+password = str(input("Enter password: "))
+
+def check_password(password):
+    passed = True
+
+    if len(password) < 8:
+        print("Your password must be at least 8 characters long.")
+        passed = False
+    if not any(char.isdigit() for char in password):
+        print("Your password needs at least one digit.")
+        passed = False
+    if not any(char.isupper() for char in password):
+        print("Your password needs at least one uppercase letter.")
+        passed = False
+    if not any(char.islower() for char in password):
+        print("Your password needs at least one lowercase letter.")
+        passed = False
+    if not any(char in "!@#$%^&*()-_+=<>?{}[]|:;\"'`~" for char in password):
+        print("Your password needs at least one special character.")
+        passed = False
+
+    if passed:
+        print("Your password is strong! 💪")
+
+check_password(password)
+
+password_strenght_meter = 0
+if len(password) >= 8:
+    password_strenght_meter += 1
+if any(char.isdigit() for char in password):
+    password_strenght_meter += 1
+if any(char.isupper() for char in password):
+    password_strenght_meter += 1   
+if any(char.islower() for char in password):
+    password_strenght_meter += 1
+if any(char in "!@#$%^&*()-_+=<>?{}[]|:;\"'`~" for char in password):
+    password_strenght_meter += 1
+
+if sum(char in "!@#$%^&*()-_+=<>?{}[]|:;\"'`~" for char in password) > 2:
+    password_strenght_meter += 4
+
+if len(password) >= 12:
+    password_strenght_meter += 1
+
+print("Password strength meter: ", password_strenght_meter)

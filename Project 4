@@ -1,0 +1,24 @@
+
+inventory = {"apple":(10,2.5), "banana":(5,1.2), "orange":(8,1.5)}
+
+inventory["mango"] = (12,3.0)
+
+inventory.pop("banana")
+
+inventory["apple"] = (12,3.0)
+
+# print(inventory)
+
+# for i in inventory:
+    # print("item:",i, "quantity:", inventory[i][0], "price:", inventory[i][1])
+
+grand_total = 0
+total = 0
+for i in inventory:
+    total += inventory[i][0] * inventory[i][1]
+    grand_total += total
+print("Total inventory value:", grand_total)
+
+
+
+

@@ -1,0 +1,40 @@
+num = int(input("Enter another number: "))
+
+try:
+    num = int(input("Enter a number: "))
+    print(100 / num)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+except ValueError:
+    print("That's not a valid number!")
+
+def raise_index_error():
+    try:
+        my_list = [1, 2, 3]
+        print("Accessing index 5 of list:", my_list[5])
+    except IndexError as e:
+        print("Caught an IndexError:", e)
+
+def raise_key_error():
+    try:
+        my_dict = {"name": "Alice", "age": 30}
+        print("Accessing non-existent key 'city':", my_dict["city"])
+    except KeyError as e:
+        print("Caught a KeyError:", e)
+
+def raise_type_error():
+    try:
+        result = "The number is: " + 10
+        print(result)
+    except TypeError as e:
+        print("Caught a TypeError:", e)
+
+def main():
+    raise_index_error()
+    raise_key_error()
+    raise_type_error()
+
+if __name__ == "__main__":
+    main()
+
+

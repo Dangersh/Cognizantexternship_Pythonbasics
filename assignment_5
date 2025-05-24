@@ -1,0 +1,36 @@
+
+def greet_user (name):
+    print(f"Hello, {name}! Welcome aboard.")
+
+def add(a, b):
+    print (f"The sum of {a} and {b} is {a + b}.")
+    
+
+greet_user("Alice"),add(5, 3)
+
+def describe_pet(pet_name, animal_type='dog'):
+    print(f"I have a {animal_type} named {pet_name}.")
+describe_pet('Willie')
+
+def make_sandwich(*ingredients):
+    print("Making a sandwich with the following ingredients:")
+    for ingredient in ingredients:
+        print(f"- {ingredient}")
+
+make_sandwich('ham', 'cheese', 'lettuce', 'tomato')
+
+def factorial(n):
+ if n == 1:   # Base case
+    return 1
+ else:
+    return n * factorial(n - 1)    # Recursive case
+ 
+print(factorial(5)) 
+
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)

@@ -1,0 +1,24 @@
+fruits = ['apple', 'banana', 'cherry', 'kiwi', 'mango']
+
+fruits.append('orange')
+fruits.remove('banana')
+
+print(fruits[::-1])
+
+dictionary = {"name": 'dan', "age": 21, "city": 'toronto'}
+
+dictionary['favourite colour'] = 'blue'
+dictionary['city'] = 'vancouver'
+
+print(dictionary)
+
+for i in dictionary:
+    print(i, dictionary[i])
+print(dictionary.keys())
+print(dictionary.values())
+
+dan = ("godfather","all about soul","the godfather")
+dan.append("the godfather part 2")
+print(dan)
+
+print(len(dan))

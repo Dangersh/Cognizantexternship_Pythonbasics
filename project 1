@@ -1,5 +1,6 @@
-age = int(input("How old are you? "))
+age = int(input("How old are you? ")) # Get user's age as an integer input
 
+# Using an if-elif-else statement to check voting eligibility
 if age > 18:
     print("Congratulations! You are eligible to vote. Go make a difference!")
 elif age < 18:

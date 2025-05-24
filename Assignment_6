@@ -1,4 +1,4 @@
-num = int(input("Enter another number: "))
+#Q1
 
 try:
     num = int(input("Enter a number: "))
@@ -8,12 +8,19 @@ except ZeroDivisionError:
 except ValueError:
     print("That's not a valid number!")
 
+print()  # blank line
+print()  # blank line1
+
+#Q2 - Types of Exceptions
+
 def raise_index_error():
     try:
         my_list = [1, 2, 3]
         print("Accessing index 5 of list:", my_list[5])
     except IndexError as e:
         print("Caught an IndexError:", e)
+    finally:
+        pass
 
 def raise_key_error():
     try:
@@ -30,11 +37,49 @@ def raise_type_error():
         print("Caught a TypeError:", e)
 
 def main():
+    print ("Q2 - Types of exceptions!!")
     raise_index_error()
     raise_key_error()
     raise_type_error()
+    
 
 if __name__ == "__main__":
     main()
+
+
+ # Task 3 - Using try...except...else...finally  
+
+#print blanks
+print()  
+print()
+print ("Q3:")
+  
+try:
+    # Prompt the user for input
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    # Attempt the division
+    result = num1 / num2
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+except ValueError:
+    print("Error: Please enter valid numbers.")
+
+else:
+    # Only runs if no exceptions occurred
+    print(f"The result is {result}.")
+
+finally:
+    # Always runs no matter what
+    print("This block always executes.")
+
+
+
+
+
+
 
 

@@ -1,14 +1,19 @@
-# Ignore virtual environments
+# Virtual environment folders
 .venv/
-myenv/
+venv/
 env/
+myenv/
 
-# Ignore Python cache and metadata
+# Python cache files
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 
 # VS Code settings
 .vscode/
 
+# Jupyter notebook checkpoints (if you use Jupyter)
+.ipynb_checkpoints/
+
+# macOS system files
 .DS_Store

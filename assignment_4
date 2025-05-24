@@ -1,10 +1,14 @@
+# Q1 - Create a list of fruits
 fruits = ['apple', 'banana', 'cherry', 'kiwi', 'mango']
 
+# Add 'orange' to the end of the fruits list
+# Remove 'banana' from the fruits list
 fruits.append('orange')
 fruits.remove('banana')
 
 print(fruits[::-1])
 
+# Q2 - Create a dictionary with personal information
 dictionary = {"name": 'dan', "age": 21, "city": 'toronto'}
 
 dictionary['favourite colour'] = 'blue'
@@ -17,6 +21,7 @@ for i in dictionary:
 print(dictionary.keys())
 print(dictionary.values())
 
+# Q3 - Create a tuple with favorite)
 dan = ("godfather","all about soul","the godfather")
 dan.append("the godfather part 2")
 print(dan)

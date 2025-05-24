@@ -1,10 +1,12 @@
 def factorial(n):
+    # Recursive factorial calculation
     if n == 1:
         return 1
     else:
         return n * factorial(n - 1)
 
 def fibonacci(n):
+    # Recursive Fibonacci calculation
     if n <= 0:
         return 0
     elif n == 1:
@@ -13,6 +15,7 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 
 while True:
+    # Menu display
     print("\n=== Recursive Function Menu ===")
     print("1. Calculate the factorial of a number")
     print("2. Find the nth Fibonacci number")
@@ -36,6 +39,7 @@ while True:
             print(f"The {num}th Fibonacci number is {fibonacci(num)}")
 
     elif choice == "3":
+        # Placeholder for bonus feature
         print("Fractal pattern not implemented yet. Bonus coming soon!")
 
     elif choice == "4":

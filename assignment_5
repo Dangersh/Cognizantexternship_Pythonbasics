@@ -1,3 +1,4 @@
+print ("Q1") #Q1
 
 def greet_user (name):
     print(f"Hello, {name}! Welcome aboard.")
@@ -5,13 +6,18 @@ def greet_user (name):
 def add(a, b):
     print (f"The sum of {a} and {b} is {a + b}.")
     
-
 greet_user("Alice"),add(5, 3)
 
+print()  
+
+print ("Q2") #Q2
 def describe_pet(pet_name, animal_type='dog'):
     print(f"I have a {animal_type} named {pet_name}.")
 describe_pet('Willie')
 
+print()
+
+print ("Q3") #Q3
 def make_sandwich(*ingredients):
     print("Making a sandwich with the following ingredients:")
     for ingredient in ingredients:
@@ -19,6 +25,9 @@ def make_sandwich(*ingredients):
 
 make_sandwich('ham', 'cheese', 'lettuce', 'tomato')
 
+print()
+
+print ("Q4") #Q4
 def factorial(n):
  if n == 1:   # Base case
     return 1

@@ -1,17 +1,22 @@
-
+# Define the inventory dictionary with items as keys and tuples of (quantity, price) as values
 inventory = {"apple":(10,2.5), "banana":(5,1.2), "orange":(8,1.5)}
 
+# Add a new item "mango" with its quantity and price
 inventory["mango"] = (12,3.0)
 
+# Remove the item "banana" from the inventory
 inventory.pop("banana")
 
+# Update the quantity and price for the existing item "apple"
 inventory["apple"] = (12,3.0)
 
-# print(inventory)
+print(inventory)
 
-# for i in inventory:
-    # print("item:",i, "quantity:", inventory[i][0], "price:", inventory[i][1])
+# Loop through each item in the inventory to print item details clearly
+for i in inventory:
+    print("item:",i, "quantity:", inventory[i][0], "price:", inventory[i][1])
 
+# Initialize variables to calculate total inventory value
 grand_total = 0
 total = 0
 for i in inventory:

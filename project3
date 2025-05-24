@@ -1,30 +1,43 @@
 password = str(input("Enter password: "))
 
 def check_password(password):
-    passed = True
+    passed = True  # Flag to track if password passes all checks
 
+    # Check minimum length
     if len(password) < 8:
         print("Your password must be at least 8 characters long.")
         passed = False
+
+    # Check for at least one digit
     if not any(char.isdigit() for char in password):
         print("Your password needs at least one digit.")
         passed = False
+
+    # Check for at least one uppercase letter
     if not any(char.isupper() for char in password):
         print("Your password needs at least one uppercase letter.")
         passed = False
+
+    # Check for at least one lowercase letter
     if not any(char.islower() for char in password):
         print("Your password needs at least one lowercase letter.")
         passed = False
+
+    # Check for at least one special character
     if not any(char in "!@#$%^&*()-_+=<>?{}[]|:;\"'`~" for char in password):
         print("Your password needs at least one special character.")
         passed = False
 
+    # If all checks pass, confirm strong password
     if passed:
         print("Your password is strong! 💪")
 
 check_password(password)
 
+# Calculate a numerical password strength score
 password_strenght_meter = 0
+
+# Increment score for each criterion met
 if len(password) >= 8:
     password_strenght_meter += 1
 if any(char.isdigit() for char in password):
@@ -36,9 +49,11 @@ if any(char.islower() for char in password):
 if any(char in "!@#$%^&*()-_+=<>?{}[]|:;\"'`~" for char in password):
     password_strenght_meter += 1
 
+# Bonus points if password has more than 2 special characters
 if sum(char in "!@#$%^&*()-_+=<>?{}[]|:;\"'`~" for char in password) > 2:
     password_strenght_meter += 4
 
+# Extra point for length >= 12
 if len(password) >= 12:
     password_strenght_meter += 1
 
